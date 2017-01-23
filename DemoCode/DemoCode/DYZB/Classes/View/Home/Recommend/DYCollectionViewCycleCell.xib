@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZS4-co-V1l" customClass="DYCollectionViewCycleCell" customModule="DemoCode" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="204" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p33-0d-mlE"/>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="p33-0d-mlE" secondAttribute="trailing" id="3Ws-48-3Au"/>
+                <constraint firstItem="p33-0d-mlE" firstAttribute="top" secondItem="ZS4-co-V1l" secondAttribute="top" id="7vJ-jV-ZVz"/>
+                <constraint firstAttribute="bottom" secondItem="p33-0d-mlE" secondAttribute="bottom" id="Oj7-HS-IAB"/>
+                <constraint firstItem="p33-0d-mlE" firstAttribute="leading" secondItem="ZS4-co-V1l" secondAttribute="leading" id="qeb-nA-qtC"/>
+            </constraints>
+            <size key="customSize" width="204" height="93"/>
+            <connections>
+                <outlet property="imageView" destination="p33-0d-mlE" id="Ybe-ci-vor"/>
+            </connections>
+            <point key="canvasLocation" x="-90" y="11.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

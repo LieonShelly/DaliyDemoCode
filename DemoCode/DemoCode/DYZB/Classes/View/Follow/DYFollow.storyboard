@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FBl-JA-dYa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Follow View Controller-->
+        <scene sceneID="XvA-8O-sI9">
+            <objects>
+                <viewController id="Gx8-Xv-LZ7" customClass="DYFollowViewController" customModule="DemoCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fje-C8-UWC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohp-1Y-DeR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LJW-cy-gBf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pJq-f7-mDY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zuc-Gg-maN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496.8" y="-131.78410794602701"/>
+        </scene>
+        <!--关注-->
+        <scene sceneID="m2h-oS-Yde">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FBl-JA-dYa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="关注" id="Iqr-v3-N7G"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwW-YO-0Um">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gx8-Xv-LZ7" kind="relationship" relationship="rootViewController" id="bKf-EP-23y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQC-we-Z3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557.60000000000002" y="-131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>

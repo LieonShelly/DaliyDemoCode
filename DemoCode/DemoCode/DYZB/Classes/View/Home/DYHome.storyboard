@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iXC-WD-KPv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="PmL-BN-oEE">
+            <objects>
+                <viewController id="kIi-dT-Kty" customClass="DYHomeViewController" customModule="DemoCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9S9-Nd-O4N"/>
+                        <viewControllerLayoutGuide type="bottom" id="cGK-z3-h1Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p5s-FO-2jE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Plk-PM-a6R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="194-A6-rko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8" y="140.77961019490255"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="54E-se-TD6">
+            <objects>
+                <viewController storyboardIdentifier="DYPlayViewController" id="uGf-B8-EY5" customClass="DYPlayViewController" customModule="DemoCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gna-nI-vN2"/>
+                        <viewControllerLayoutGuide type="bottom" id="xH7-j8-oZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mAe-19-OGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFt-LZ-BcF">
+                                <state key="normal" title="切换镜头"/>
+                                <connections>
+                                    <action selector="switchSence:" destination="uGf-B8-EY5" eventType="touchUpInside" id="sZn-tq-Z4I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLS-YX-2CB">
+                                <state key="normal" title="停止扫描"/>
+                                <connections>
+                                    <action selector="stopScanAction:" destination="uGf-B8-EY5" eventType="touchUpInside" id="Ef4-1I-hjO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TLS-YX-2CB" firstAttribute="top" secondItem="hFt-LZ-BcF" secondAttribute="bottom" constant="30" id="McP-pi-mki"/>
+                            <constraint firstItem="TLS-YX-2CB" firstAttribute="centerY" secondItem="mAe-19-OGZ" secondAttribute="centerY" id="POp-Cx-Rmk"/>
+                            <constraint firstItem="TLS-YX-2CB" firstAttribute="centerX" secondItem="mAe-19-OGZ" secondAttribute="centerX" id="pQz-7s-zx8"/>
+                            <constraint firstItem="hFt-LZ-BcF" firstAttribute="centerX" secondItem="mAe-19-OGZ" secondAttribute="centerX" id="uhI-sp-EVA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LkF-s2-9tV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077.5999999999999" y="118.29085457271366"/>
+        </scene>
+        <!-- 首页-->
+        <scene sceneID="sV4-qc-sxX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iXC-WD-KPv" customClass="DYMainNavigationController" customModule="DemoCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title=" 首页" id="FIH-9w-0sS"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VVm-d5-d34">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kIi-dT-Kty" kind="relationship" relationship="rootViewController" id="6TR-HU-zQ9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xnx-Qj-c5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.59999999999999" y="140.77961019490255"/>
+        </scene>
+    </scenes>
+</document>

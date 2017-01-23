@@ -1,0 +1,10 @@
+framework module MonkeyKing {
+  umbrella header "MonkeyKing.h"
+
+  export *
+  module * { export * }
+}
+
+module MonkeyKing.Swift {
+    header "MonkeyKing-Swift.h"
+}

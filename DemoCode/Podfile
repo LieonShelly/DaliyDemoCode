@@ -1,0 +1,11 @@
+source 'https://192.168.2.220/MSH/ios-repos.git'
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+def pods
+    pod 'LRefresh'
+    pod "PromiseKit", "~> 4.0"
+    pod 'CHPushSocket'
+end
+target 'DemoCode' do
+pods
+end

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pEp-tr-hNs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Socket View Controller-->
+        <scene sceneID="PYN-Dq-tKL">
+            <objects>
+                <viewController id="QU1-fL-HJf" customClass="MOSocketViewController" customModule="DemoCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jrx-vh-3R1"/>
+                        <viewControllerLayoutGuide type="bottom" id="gYe-u8-fWM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NcN-Wt-UJB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="发送消息" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jNL-Qx-O5t">
+                                <rect key="frame" x="67" y="132" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Lpa-T6-S4i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="接受消息" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DnM-fW-Lbf">
+                                <rect key="frame" x="67" y="330" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.3803921569" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="GlT-J5-WMv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Faj-0j-GKj">
+                                <rect key="frame" x="50" y="280" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ejv-k7-pTH"/>
+                                </constraints>
+                                <state key="normal" title="发送"/>
+                                <connections>
+                                    <action selector="sendAction:" destination="QU1-fL-HJf" eventType="touchUpInside" id="eSu-5B-FTk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jNL-Qx-O5t" secondAttribute="trailing" constant="68" id="3ep-yo-FbA"/>
+                            <constraint firstItem="DnM-fW-Lbf" firstAttribute="leading" secondItem="NcN-Wt-UJB" secondAttribute="leadingMargin" constant="51" id="Ca4-QS-6qG"/>
+                            <constraint firstItem="DnM-fW-Lbf" firstAttribute="top" secondItem="Faj-0j-GKj" secondAttribute="bottom" constant="20" id="DSk-mi-K4a"/>
+                            <constraint firstItem="Faj-0j-GKj" firstAttribute="top" secondItem="jNL-Qx-O5t" secondAttribute="bottom" constant="20" id="O4H-IR-BX1"/>
+                            <constraint firstAttribute="trailing" secondItem="Faj-0j-GKj" secondAttribute="trailing" constant="50" id="ZgK-4l-3dU"/>
+                            <constraint firstItem="jNL-Qx-O5t" firstAttribute="leading" secondItem="NcN-Wt-UJB" secondAttribute="leading" constant="67" id="brr-n0-fGa"/>
+                            <constraint firstItem="Faj-0j-GKj" firstAttribute="leading" secondItem="NcN-Wt-UJB" secondAttribute="leading" constant="50" id="fX0-vC-tcU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DnM-fW-Lbf" secondAttribute="trailing" constant="52" id="hpU-gT-5VU"/>
+                            <constraint firstItem="jNL-Qx-O5t" firstAttribute="top" secondItem="Jrx-vh-3R1" secondAttribute="bottom" constant="68" id="scO-1e-YSP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jPK-KD-Wn8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="75r-1w-cqX">
+                            <connections>
+                                <action selector="reconnectAction:" destination="QU1-fL-HJf" id="4je-AQ-kop"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4EL-rO-Nuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848.79999999999995" y="169.56521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AvT-hv-ac7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pEp-tr-hNs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H2s-k6-lHG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QU1-fL-HJf" kind="relationship" relationship="rootViewController" id="deV-bZ-Hy0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AV6-gE-iRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90.400000000000006" y="169.56521739130437"/>
+        </scene>
+    </scenes>
+</document>

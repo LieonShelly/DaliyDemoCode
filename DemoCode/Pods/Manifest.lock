@@ -1,0 +1,31 @@
+PODS:
+  - CHPushSocket (0.5.0):
+    - SocketRocket (~> 0.5.1)
+  - LRefresh (0.0.1)
+  - PromiseKit (4.1.3):
+    - PromiseKit/Foundation (= 4.1.3)
+    - PromiseKit/QuartzCore (= 4.1.3)
+    - PromiseKit/UIKit (= 4.1.3)
+  - PromiseKit/CorePromise (4.1.3)
+  - PromiseKit/Foundation (4.1.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.3):
+    - PromiseKit/CorePromise
+  - SocketRocket (0.5.1)
+
+DEPENDENCIES:
+  - CHPushSocket
+  - LRefresh
+  - PromiseKit (~> 4.0)
+
+SPEC CHECKSUMS:
+  CHPushSocket: '00831bd30a61d0b56810dfff830bb8e7a6561b5c'
+  LRefresh: 22c673f8c98e786d469fced3eca648859e082c2e
+  PromiseKit: 56baec63efa89210c023260879435a5a6b3bff00
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+
+PODFILE CHECKSUM: ede9e1e546c944c5073d9e6a2cf90e4676e13f53
+
+COCOAPODS: 1.1.1

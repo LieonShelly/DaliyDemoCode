@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DYGameHeaderView" customModule="DemoCode" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="303"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRb-m4-FRy">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTG-37-r3m">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="57" id="NZq-yn-GmF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="常用" image="Img_orange">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="QPM-CD-soR"/>
+                        <constraint firstAttribute="bottom" secondItem="PTG-37-r3m" secondAttribute="bottom" id="WPI-q1-tGU"/>
+                        <constraint firstItem="PTG-37-r3m" firstAttribute="leading" secondItem="cRb-m4-FRy" secondAttribute="leading" id="c2F-sA-YSS"/>
+                        <constraint firstItem="PTG-37-r3m" firstAttribute="top" secondItem="cRb-m4-FRy" secondAttribute="top" id="czn-0E-nJB"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ois-6e-hTz">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gv2-S2-JX0">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.38055490019999999" blue="0.2395271373" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ois-6e-hTz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="B8a-jv-GFZ"/>
+                <constraint firstAttribute="trailing" secondItem="cRb-m4-FRy" secondAttribute="trailing" id="HhZ-Wn-eCv"/>
+                <constraint firstItem="cRb-m4-FRy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Prf-au-lY4"/>
+                <constraint firstAttribute="trailing" secondItem="ois-6e-hTz" secondAttribute="trailing" id="UPX-Ga-DCb"/>
+                <constraint firstItem="cRb-m4-FRy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YT0-sO-hLH"/>
+                <constraint firstAttribute="bottom" secondItem="ois-6e-hTz" secondAttribute="bottom" id="dhv-LI-USU"/>
+                <constraint firstItem="ois-6e-hTz" firstAttribute="top" secondItem="cRb-m4-FRy" secondAttribute="bottom" id="i5R-n1-PCg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="ois-6e-hTz" id="FGW-eC-twl"/>
+            </connections>
+            <point key="canvasLocation" x="231" y="-241.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Img_orange" width="3" height="15"/>
+    </resources>
+</document>
