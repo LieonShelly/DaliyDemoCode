@@ -7,6 +7,7 @@
 //  App Store首页、知乎发现也的头部在下拉的时候是不动的，上推得时候会和列表一起无视差上滑动。
 
 import UIKit
+import LRefresh
 
 class AppStoreViewController: UIViewController {
 
@@ -24,6 +25,11 @@ class AppStoreViewController: UIViewController {
         return header
     }()
 
+    fileprivate lazy var refresh: LRefreshControl = {
+        let refresh = LRefreshControl()
+        return refresh
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        automaticallyAdjustsScrollViewInsets = false
@@ -31,6 +37,10 @@ class AppStoreViewController: UIViewController {
         view.addSubview(tableView)
         header.frame =  CGRect(x: 0, y: 64, width: tableView.bounds.width, height: 140)
         view.addSubview(header)
+        tableView.addSubview(refresh)
+        refresh.refreshHandler = {
+            
+        }
     }
 
 }

@@ -10,10 +10,9 @@ import UIKit
 
 
 class RefreshView: UIView {
-
     @IBOutlet weak var pullArrow: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var loadingView: UIImageView!
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     var state: RefrehState = .normal {
         didSet {
             switch state {
@@ -33,15 +32,20 @@ class RefreshView: UIView {
                 textLabel.text = "正在刷新中..."
                 loadingView.isHidden = false
                 pullArrow.isHidden = true
+                loadingView.startAnimating()
             }
         }
     }
     
     class func refreView() -> RefreshView {
-        let nib = UINib(nibName: "RefreshView", bundle: nil)
+        let nib = UINib(nibName: "LRefreshView", bundle: nil)
         guard let view = nib.instantiate(withOwner: nil, options: nil)[0] as? RefreshView else { return RefreshView() }
         return view
     }
-
+  
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        loadingView.isHidden = true
+    }
 
 }
